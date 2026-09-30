@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Apple Financial Analysis</title>
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+
+        <div class="header__inner">
+
+          <div class="logo">
+            FinAnalysis
+          </div>
+
+          <nav class="nav">
+            <a href="#overview">Overview</a>
+            <a href="#performance">Performance</a>
+            <a href="#cashflow">Cash Flow</a>
+            <a href="#ratios">Ratios</a>
+            <a href="#methodology">Methodology</a>
+            <a href="#findings">Findings</a>
+          </nav>
+
+        </div>
+
+      </div>
+    </header>
+
+
+    <main>
+
+      <!-- HERO -->
+      <section class="hero">
+
+        <div class="container">
+
+          <div class="hero__content">
+
+            <p class="hero__eyebrow">
+              Financial Performance Dashboard
+            </p>
+
+            <h1>
+              Apple Inc. Financial Analysis
+            </h1>
+
+            <p class="hero__text">
+              Interactive analysis of revenue,
+              profitability, cash flow and balance
+              sheet performance for fiscal years
+              2021–2025.
+            </p>
+
+            <a
+              class="button"
+              href="#overview"
+            >
+              View analysis
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- OVERVIEW -->
+      <section
+        class="overview section"
+        id="overview"
+      >
+
+        <div class="container">
+
+          <h2 class="section-title">
+            Overview
+          </h2>
+
+          <div class="kpi-grid">
+
+            <div class="kpi-card">
+
+              <p class="kpi-label">
+                Revenue
+              </p>
+
+              <h3
+                class="kpi-value"
+                id="revenue-value"
+              >
+                —
+              </h3>
+
+              <span
+                class="kpi-change"
+                id="revenue-change"
+              >
+                —
+              </span>
+
+            </div>
+
+
+            <div class="kpi-card">
+
+              <p class="kpi-label">
+                Net Income
+              </p>
+
+              <h3
+                class="kpi-value"
+                id="net-income-value"
+              >
+                —
+              </h3>
+
+              <span
+                class="kpi-change"
+                id="net-income-change"
+              >
+                —
+              </span>
+
+            </div>
+
+
+            <div class="kpi-card">
+
+              <p class="kpi-label">
+                Net Margin
+              </p>
+
+              <h3
+                class="kpi-value"
+                id="net-margin-value"
+              >
+                —
+              </h3>
+
+              <span
+                class="kpi-change"
+                id="net-margin-change"
+              >
+                —
+              </span>
+
+            </div>
+
+
+            <div class="kpi-card">
+
+              <p class="kpi-label">
+                Free Cash Flow
+              </p>
+
+              <h3
+                class="kpi-value"
+                id="fcf-value"
+              >
+                —
+              </h3>
+
+              <span
+                class="kpi-change"
+                id="fcf-change"
+              >
+                —
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- PERFORMANCE -->
+      <section
+        class="performance section"
+        id="performance"
+      >
+
+        <div class="container">
+
+          <h2 class="section-title">
+            Performance
+          </h2>
+
+
+          <!-- REVENUE -->
+          <div class="chart-card">
+
+            <div class="chart-card__header">
+
+              <div>
+
+                <h3>
+                  Revenue & Net Income
+                </h3>
+
+                <p>
+                  Financial performance over
+                  the analyzed period
+                </p>
+
+              </div>
+
+              <span class="chart-period">
+                2021–2025
+              </span>
+
+            </div>
+
+            <div class="chart-wrapper">
+
+              <canvas
+                id="revenue-profit-chart"
+              ></canvas>
+
+            </div>
+
+          </div>
+
+
+          <div class="chart-row">
+
+            <!-- PROFITABILITY -->
+            <div
+              class="chart-card chart-card--small"
+            >
+
+              <div class="chart-card__header">
+
+                <div>
+
+                  <h3>
+                    Profitability
+                  </h3>
+
+                  <p>
+                    Gross, operating and net margins
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div
+                class="chart-wrapper chart-wrapper--small"
+              >
+
+                <canvas
+                  id="profitability-chart"
+                ></canvas>
+
+              </div>
+
+            </div>
+
+
+            <!-- BALANCE -->
+            <div
+              class="chart-card chart-card--small"
+            >
+
+              <div class="chart-card__header">
+
+                <div>
+
+                  <h3>
+                    Balance & Liquidity
+                  </h3>
+
+                  <p>
+                    Assets, debt and cash position
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div
+                class="chart-wrapper chart-wrapper--small"
+              >
+
+                <canvas
+                  id="balance-chart"
+                ></canvas>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- CASH FLOW -->
+      <section
+        class="cashflow section"
+        id="cashflow"
+      >
+
+        <div class="container">
+
+          <h2 class="section-title">
+            Cash Flow
+          </h2>
+
+          <div class="chart-card">
+
+            <div class="chart-card__header">
+
+              <div>
+
+                <h3>
+                  Cash Flow Performance
+                </h3>
+
+                <p>
+                  Operating cash flow,
+                  capital expenditures and
+                  free cash flow
+                </p>
+
+              </div>
+
+              <span class="chart-period">
+                2021–2025
+              </span>
+
+            </div>
+
+            <div class="chart-wrapper">
+
+              <canvas
+                id="cash-flow-chart"
+              ></canvas>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- RATIOS -->
+      <section
+        class="ratios section"
+        id="ratios"
+      >
+
+        <div class="container">
+
+          <div class="section-heading">
+
+            <div>
+
+              <p class="section-eyebrow">
+                Financial Health
+              </p>
+
+              <h2 class="section-title">
+                Financial Ratios
+              </h2>
+
+            </div>
+
+            <p class="section-description">
+              Key indicators calculated
+              from Apple financial statements.
+            </p>
+
+          </div>
+
+
+          <div class="ratio-grid">
+
+            <article class="ratio-card">
+
+              <p class="ratio-label">
+                Revenue CAGR
+              </p>
+
+              <h3
+                class="ratio-value"
+                id="revenue-cagr"
+              >
+                —
+              </h3>
+
+              <p class="ratio-description">
+                Average annual revenue growth
+                during 2021–2025.
+              </p>
+
+            </article>
+
+
+            <article class="ratio-card">
+
+              <p class="ratio-label">
+                FCF Margin
+              </p>
+
+              <h3
+                class="ratio-value"
+                id="fcf-margin"
+              >
+                —
+              </h3>
+
+              <p class="ratio-description">
+                Share of revenue converted
+                into free cash flow.
+              </p>
+
+            </article>
+
+
+            <article class="ratio-card">
+
+              <p class="ratio-label">
+                Debt / Assets
+              </p>
+
+              <h3
+                class="ratio-value"
+                id="debt-assets"
+              >
+                —
+              </h3>
+
+              <p class="ratio-description">
+                Debt relative to total
+                company assets.
+              </p>
+
+            </article>
+
+
+            <article class="ratio-card">
+
+              <p class="ratio-label">
+                Cash / Debt
+              </p>
+
+              <h3
+                class="ratio-value"
+                id="cash-debt"
+              >
+                —
+              </h3>
+
+              <p class="ratio-description">
+                Cash available for every
+                dollar of debt.
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- METHODOLOGY -->
+      <section
+        class="methodology section"
+        id="methodology"
+      >
+
+        <div class="container">
+
+          <div class="section-heading">
+
+            <div>
+
+              <p class="section-eyebrow">
+                Data & Methodology
+              </p>
+
+              <h2 class="section-title">
+                How the Analysis Was Built
+              </h2>
+
+            </div>
+
+            <p class="section-description">
+              Financial metrics are calculated
+              from Apple fiscal-year financial
+              statements using Python and Pandas.
+            </p>
+
+          </div>
+
+
+          <div class="methodology-grid">
+
+            <!-- DATA SOURCE -->
+            <article class="methodology-card">
+
+              <span class="methodology-number">
+                01
+              </span>
+
+              <h3>
+                Data Source
+              </h3>
+
+              <p>
+                Financial data was collected from
+                Apple Inc. annual Form 10-K filings
+                published through the U.S. Securities
+                and Exchange Commission EDGAR system.
+              </p>
+
+              <div class="source-list">
+
+                <div class="source-item">
+                  <span>Apple Form 10-K</span>
+                  <strong>FY2021</strong>
+                </div>
+
+                <div class="source-item">
+                  <span>Apple Form 10-K</span>
+                  <strong>FY2023</strong>
+                </div>
+
+                <div class="source-item">
+                  <span>Apple Form 10-K</span>
+                  <strong>FY2025</strong>
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <!-- PROCESSING -->
+            <article class="methodology-card">
+
+              <span class="methodology-number">
+                02
+              </span>
+
+              <h3>
+                Data Processing
+              </h3>
+
+              <p>
+                Raw financial statement values are
+                stored in CSV format and processed
+                using Python and Pandas before being
+                displayed by the dashboard.
+              </p>
+
+              <div class="pipeline">
+
+                <span>Raw CSV</span>
+
+                <span class="pipeline-arrow">
+                  →
+                </span>
+
+                <span>Python</span>
+
+                <span class="pipeline-arrow">
+                  →
+                </span>
+
+                <span>JSON</span>
+
+                <span class="pipeline-arrow">
+                  →
+                </span>
+
+                <span>Dashboard</span>
+
+              </div>
+
+            </article>
+
+
+            <!-- CALCULATIONS -->
+            <article
+              class="methodology-card methodology-card--wide"
+            >
+
+              <span class="methodology-number">
+                03
+              </span>
+
+              <h3>
+                Calculated Metrics
+              </h3>
+
+              <p>
+                Analytical indicators are calculated
+                programmatically rather than entered
+                manually into the dashboard.
+              </p>
+
+              <div class="formula-grid">
+
+                <div class="formula-item">
+
+                  <span class="formula-name">
+                    Net Margin
+                  </span>
+
+                  <code>
+                    Net Income / Revenue × 100
+                  </code>
+
+                </div>
+
+
+                <div class="formula-item">
+
+                  <span class="formula-name">
+                    Free Cash Flow
+                  </span>
+
+                  <code>
+                    Operating Cash Flow − CapEx
+                  </code>
+
+                </div>
+
+
+                <div class="formula-item">
+
+                  <span class="formula-name">
+                    FCF Margin
+                  </span>
+
+                  <code>
+                    Free Cash Flow / Revenue × 100
+                  </code>
+
+                </div>
+
+
+                <div class="formula-item">
+
+                  <span class="formula-name">
+                    Debt / Assets
+                  </span>
+
+                  <code>
+                    Total Debt / Total Assets
+                  </code>
+
+                </div>
+
+
+                <div class="formula-item">
+
+                  <span class="formula-name">
+                    Cash / Debt
+                  </span>
+
+                  <code>
+                    Cash / Total Debt
+                  </code>
+
+                </div>
+
+
+                <div class="formula-item">
+
+                  <span class="formula-name">
+                    Revenue CAGR
+                  </span>
+
+                  <code>
+                    (Ending / Beginning)^(1/n) − 1
+                  </code>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <!-- SCOPE -->
+            <article
+              class="methodology-card methodology-card--wide"
+            >
+
+              <span class="methodology-number">
+                04
+              </span>
+
+              <h3>
+                Analysis Scope
+              </h3>
+
+              <div class="scope-grid">
+
+                <div>
+                  <span class="scope-label">
+                    Company
+                  </span>
+
+                  <strong>
+                    Apple Inc.
+                  </strong>
+                </div>
+
+
+                <div>
+                  <span class="scope-label">
+                    Ticker
+                  </span>
+
+                  <strong>
+                    AAPL
+                  </strong>
+                </div>
+
+
+                <div>
+                  <span class="scope-label">
+                    Period
+                  </span>
+
+                  <strong>
+                    FY2021–FY2025
+                  </strong>
+                </div>
+
+
+                <div>
+                  <span class="scope-label">
+                    Currency
+                  </span>
+
+                  <strong>
+                    USD
+                  </strong>
+                </div>
+
+
+                <div>
+                  <span class="scope-label">
+                    Display Unit
+                  </span>
+
+                  <strong>
+                    USD Billions
+                  </strong>
+                </div>
+
+
+                <div>
+                  <span class="scope-label">
+                    Reporting Basis
+                  </span>
+
+                  <strong>
+                    Fiscal Year
+                  </strong>
+                </div>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- FINDINGS -->
+      <section
+        class="findings section"
+        id="findings"
+      >
+
+        <div class="container">
+
+          <div class="section-heading">
+
+            <div>
+
+              <p class="section-eyebrow">
+                Data-driven Insights
+              </p>
+
+              <h2 class="section-title">
+                Key Findings
+              </h2>
+
+            </div>
+
+            <p class="section-description">
+              Automatically generated from
+              the analyzed financial data.
+            </p>
+
+          </div>
+
+
+          <div
+            class="findings-grid"
+            id="findings-container"
+          >
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+      <div class="container">
+
+        <p class="footer-title">
+          Apple Financial Analysis
+        </p>
+
+        <p>
+          Built with Python, Pandas,
+          JavaScript, Chart.js, HTML and CSS.
+        </p>
+
+        <p class="footer-note">
+          Data source: Apple Inc. Form 10-K filings,
+          SEC EDGAR.
+        </p>
+
+      </div>
+
+    </footer>
+
+  </div>
+
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"
+  ></script>
+
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

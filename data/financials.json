@@ -1,0 +1,113 @@
+{
+  "company": {
+    "name": "Apple Inc.",
+    "ticker": "AAPL",
+    "currency": "USD",
+    "period": "2021–2025",
+    "unit": "USD billions",
+    "yearType": "Fiscal year"
+  },
+  "summary": {
+    "revenueCAGR": 3.28
+  },
+  "findings": [
+    {
+      "title": "Revenue Growth",
+      "text": "Revenue increased from $365.8B in 2021 to $416.2B in 2025, representing a 3.3% CAGR."
+    },
+    {
+      "title": "Profitability",
+      "text": "Net margin changed from 25.9% to 26.9%, a change of +1.0 percentage points."
+    },
+    {
+      "title": "Debt",
+      "text": "Total debt changed from $124.7B to $98.7B, representing a -20.9% change."
+    },
+    {
+      "title": "Free Cash Flow",
+      "text": "Free cash flow remained positive in 5 of 5 analyzed fiscal years and reached $98.8B in 2025."
+    }
+  ],
+  "years": {
+    "2021": {
+      "revenue": 365.817,
+      "netIncome": 94.68,
+      "grossMargin": 41.78,
+      "operatingMargin": 29.78,
+      "netMargin": 25.88,
+      "operatingCashFlow": 104.038,
+      "capex": 11.085,
+      "freeCashFlow": 92.953,
+      "totalAssets": 351.002,
+      "totalDebt": 124.719,
+      "cash": 34.94,
+      "fcfMargin": 25.41,
+      "debtToAssets": 0.355,
+      "cashToDebt": 0.28
+    },
+    "2022": {
+      "revenue": 394.328,
+      "netIncome": 99.803,
+      "grossMargin": 43.31,
+      "operatingMargin": 30.29,
+      "netMargin": 25.31,
+      "operatingCashFlow": 122.151,
+      "capex": 10.708,
+      "freeCashFlow": 111.443,
+      "totalAssets": 352.755,
+      "totalDebt": 120.069,
+      "cash": 23.646,
+      "fcfMargin": 28.26,
+      "debtToAssets": 0.34,
+      "cashToDebt": 0.197
+    },
+    "2023": {
+      "revenue": 383.285,
+      "netIncome": 96.995,
+      "grossMargin": 44.13,
+      "operatingMargin": 29.82,
+      "netMargin": 25.31,
+      "operatingCashFlow": 110.543,
+      "capex": 10.959,
+      "freeCashFlow": 99.584,
+      "totalAssets": 352.583,
+      "totalDebt": 111.088,
+      "cash": 29.965,
+      "fcfMargin": 25.98,
+      "debtToAssets": 0.315,
+      "cashToDebt": 0.27
+    },
+    "2024": {
+      "revenue": 391.035,
+      "netIncome": 93.736,
+      "grossMargin": 46.21,
+      "operatingMargin": 31.51,
+      "netMargin": 23.97,
+      "operatingCashFlow": 118.254,
+      "capex": 9.447,
+      "freeCashFlow": 108.807,
+      "totalAssets": 364.98,
+      "totalDebt": 106.629,
+      "cash": 29.943,
+      "fcfMargin": 27.83,
+      "debtToAssets": 0.292,
+      "cashToDebt": 0.281
+    },
+    "2025": {
+      "revenue": 416.161,
+      "netIncome": 112.01,
+      "grossMargin": 46.91,
+      "operatingMargin": 31.97,
+      "netMargin": 26.92,
+      "operatingCashFlow": 111.482,
+      "capex": 12.715,
+      "freeCashFlow": 98.767,
+      "totalAssets": 359.241,
+      "totalDebt": 98.657,
+      "cash": 35.934,
+      "fcfMargin": 23.73,
+      "debtToAssets": 0.275,
+      "cashToDebt": 0.364
+    }
+  }
+}
