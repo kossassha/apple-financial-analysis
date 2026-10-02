@@ -33,7 +33,7 @@ Financial calculations and data preparation are performed using Python and Panda
 
 Live website:
 
-`Add GitHub Pages link here after deployment`
+https://kossassha.github.io/apple-financial-analysis/
 
 ---
 
@@ -103,4 +103,4 @@ The cash flow section analyzes:
 Free Cash Flow is calculated as:
 
 ```text
-Free Cash Flow = Operating Cash Flow - Capital Expenditures
+Free Cash Flow = Operating Cash Flow - Capital Expenditures 
