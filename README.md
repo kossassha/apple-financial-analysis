@@ -39,8 +39,27 @@ https://kossassha.github.io/apple-financial-analysis/
 
 ## Dashboard Preview
 
-Screenshots will be added here after deployment.
+## Dashboard Preview
 
+### Overview
+
+![Dashboard Overview](assets/screenshots/dashboard-overview.png)
+
+### Revenue & Net Income
+
+![Revenue and Net Income](assets/screenshots/revenue-net-income.png)
+
+### Profitability & Balance
+
+![Profitability and Balance](assets/screenshots/profitability-balance.png)
+
+### Financial Ratios
+
+![Financial Ratios](assets/screenshots/financial-ratios.png)
+
+### Key Findings
+
+![Key Findings](assets/screenshots/key-findings.png)
 ---
 
 ## Key Features
